@@ -1,1 +1,1 @@
-alert("Hi")
+Android.sendTap(500, 500);
