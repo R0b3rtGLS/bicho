@@ -1,3 +1,5 @@
+Android.startApp("com.panzerdog.tacticool");
+
 var timer = new Timer();
 timer.start();
 
@@ -8,7 +10,6 @@ Android.sendTap(point);
 Helper.log("The hard work took", timer.getElapsedTime(), "ms");
 
 if(timer.getElapsedTime() >= 15000){
-    Android.startApp("com.panzerdog.tacticool");
     Stats.show("General", "Progress", "10%");
     timer.stop();
 }
