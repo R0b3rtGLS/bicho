@@ -1,0 +1,35 @@
+{
+	"manifest_version": 1,
+	"script": "bicho.js",
+	"config": {
+		"groups": [
+			{
+				"name": "Simple Bicho Config",
+				"options": [
+					{
+						"id": "origin",
+						"type": "choice",
+						"label":  "Destination",
+						"default": "auto",
+						"choices": {
+							"Auto": "auto",
+							"Sydney": "sydney",
+							"Sudafrica": "sudafrica"
+						}
+					},
+					{
+						"id": "destination",
+						"type": "choice",
+						"label":  "Destination",
+						"default": "auto",
+						"choices": {
+							"Auto": "auto",
+							"Sydney": "sydney",
+							"Sudafrica": "sudafrica"
+						}
+					}
+				]
+			}
+		]
+	}
+}
