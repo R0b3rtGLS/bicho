@@ -1,4 +1,4 @@
-var appPackage = "com.panzerdog.tacticool";
+var appPackage = "com.raongames.growcastle";
 var black = new Color('black');
 var blue = new Color('blue');
 var cyan = new Color('cyan');
@@ -17,14 +17,14 @@ var white = new Color('white');
 var yellow = new Color('yellow');
 
 if(Android.connected()) {
-    Helper.log("Found Device, trying to start bicho...");
+    Helper.log("Found Device, trying to start bot...");
     main();
 } else {
     Helper.log("No device connected!");
 }
 
 function main() {
-    Helper.log("Welcome to Tacticool Bicho v1");
+    Helper.log("Welcome to GrowCastle Bot v1");
     Helper.log("Checking if the game is installed...");
     Helper.log("Trying to start the game...");
     Android.startApp(appPackage);
