@@ -1,20 +1,5 @@
 var appPackage = "com.panzerdog.tacticool";
-var black = new Color('black');
-var blue = new Color('blue');
-var cyan = new Color('cyan');
-var darkblue = new Color('darkblue');
-var darkcyan = new Color('darkcyan');
-var darkgreen = new Color('darkgreen');
-var darkmagenta = new Color('darkmagenta');
-var darkred = new Color('darkred');
-var darkyellow = new Color('darkyellow');
-var gray = new Color('gray');
-var green = new Color('green');
-var lightgray = new Color('lightgray');
-var magenta = new Color('magenta');
-var red = new Color('red');
-var white = new Color('white');
-var yellow = new Color('yellow');
+
 
 if(Android.connected()) {
     Helper.log("Found Device, trying to start bicho...");
@@ -27,8 +12,24 @@ function main() {
     Helper.log("Welcome to Tacticool Bicho v1");
     Helper.log("Checking if the game is installed...");
     Helper.log("Trying to start the game...");
-    Android.startApp(appPackage);
-    gameLoop();
+    //Android.startApp(appPackage);
+    //gameLoop();
+    testGame();
+}
+
+function testGame(){
+    while(true){
+        moveTap(503, 1085, 546, 401);
+        cameraTap(2447, 650, 1779, 724);
+    }
+}
+
+function moveTap(x1, y1, x2, y2) {
+    Android.sendSwipe(new Point(x1, y1), new Point(x2, y2), 2000);
+}
+
+function cameraTap(x1, y1, x2, y2){
+    Android.sendSwipe(new Point(x1, y1), new Point(x2, y2), 2000);
 }
 
 function gameLoop() {
