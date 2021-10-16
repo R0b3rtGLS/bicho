@@ -63,9 +63,12 @@ function gameLoop() {
         var size = Android.getSize();
         Helper.log(size);
         //Take Screenshot:
-        var scrn = Android.takeScreenshot();
+        //var scrn = Android.takeScreenshot();
+
+        var SYNDROME = new Image("syndrome.png");
+
         //get matches to determine state:
-        var results = matches(scrn);
+        var results = matches(SYNDROME);
         
         //var state = detectState(results);
         //Helper.log("Determined state: " + state);
