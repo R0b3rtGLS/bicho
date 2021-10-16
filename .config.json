@@ -1,4 +1,5 @@
 {
-    "destination": "sydney",
-    "origin": "auto"
+    "debug": true,
+    "syndrome": "yellow",
+    "menu": true
 }
