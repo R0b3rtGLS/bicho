@@ -66,19 +66,20 @@ function gameLoop() {
         var scrn = Android.takeScreenshot();
         //get matches to determine state:
         var results = matches(scrn);
-        var state = detectState(results);
-        Helper.log("Determined state: " + state);
+        
+        //var state = detectState(results);
+        //Helper.log("Determined state: " + state);
         //act on detected state:
-        if(stateAction(state, results)) {
-            Helper.log("Current loop finished!");
-        } else {
-            if(lastActionResult) {
-                Helper.log("Encountered a Problem, trying again!");
-            } else {
-                Helper.log("Encountered a Problem on action!");
-                return 1;
-            }
-        }
+        //if(stateAction(state, results)) {
+        //    Helper.log("Current loop finished!");
+        //} else {
+        //    if(lastActionResult) {
+        //        Helper.log("Encountered a Problem, trying again!");
+        //    } else {
+        //        Helper.log("Encountered a Problem on action!");
+        //        return 1;
+        //    }
+        //}
     }
 }
 
