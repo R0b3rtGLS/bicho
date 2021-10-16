@@ -28,8 +28,8 @@ function main() {
     Helper.log("Trying to start the game...");
     Android.startApp(appPackage);
 
-    //gameLoop();
-    testGame();
+    gameLoop();
+    //testGame();
 }
 
 function testGame(){
