@@ -102,7 +102,7 @@ function matches(scrn) {
     }
     var allmatches = [];
     var results = {};
-    //run checks:
+/*     //run checks:
     Object.keys(toTest).forEach(function(key) {
         var vals = toTest[key];
         Helper.log("Comparing current screenshot with " + vals.tmplt + " Min Score: " + vals.score);
@@ -114,7 +114,7 @@ function matches(scrn) {
             allmatches = allmatches.concat(matches);
             results[key] = matches;
         }
-    });
+    }); */
     Object.keys(results).forEach(function(key) {
         var vals = results[key];
         Helper.log(Object.keys(vals).length + " Results found for " + key);
