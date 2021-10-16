@@ -92,14 +92,6 @@ function matches(scrn) {
     }*/
     //test:
     var toTest = {
-        main: {
-            tmplt: "main.png",
-            score: 0.99
-        },
-        booting: {
-            tmplt: "menu.png",
-            score: 0.99
-        },
         characters:{
             tmplt: "syndrome.png",
             score: 0.99
