@@ -65,7 +65,7 @@ function gameLoop() {
         //Take Screenshot:
         //var scrn = Android.takeScreenshot();
 
-        var image = new Image("image.png");
+        var image = new Image("syndrome.png");
 
         //get matches to determine state:
         var results = matches(image);
