@@ -117,9 +117,10 @@ function matches(scrn) {
         Helper.log(Object.keys(vals).length + " Results found for " + key);
     });
     Helper.log(allmatches.length + " Matches for various checks found.");
-    if(Config.getValue("prntMatches")) {
-        scrnmatches = Vision.markMatches(scrn, allmatches, magenta, 4);
-        scrnmatches.save("scrnmatches.png");
+    if(Config.getValue("origin")) {
+        var gold = new Color(255,215,0);
+        scrnmatches = Vision.markMatches(scrn, allmatches, gold, 4);
+        scrnmatches.save("syndrome.png");
     }
     return results;
 }
