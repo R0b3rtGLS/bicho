@@ -1,3 +1,14 @@
+// +---------------------+
+// | Version Information |
+// +---------------------+
+for (var i=0; i<3; i++) { Helper.log(" "); }
+Helper.log("### BOTFATHER VERSION 6.6.0 OR LATER REQUIRED ###")
+Helper.log("(You might need to update)");
+for (var i=0; i<3; i++) { Helper.log(" "); }
+
+// +---------------------+
+// | Adnroid Device Check|
+// +---------------------+
 var appPackage = "com.panzerdog.tacticool";
 
 if(Android.connected()) {
@@ -7,19 +18,32 @@ if(Android.connected()) {
     Helper.log("No device connected!");
 }
 
+// +---------------------------------------------------------------------+
+// | Templates and Data (DON'T TOUCH ANYTHING BELOW THIS LINE AS A USER) |
+// +---------------------------------------------------------------------+
+
 function main() {
     Helper.log("Welcome to Tacticool Bicho v1");
     Helper.log("Checking if the game is installed...");
     Helper.log("Trying to start the game...");
-    //Android.startApp(appPackage);
+    Android.startApp(appPackage);
+
     //gameLoop();
     testGame();
 }
 
 function testGame(){
     while(true){
-        moveTap(503, 1085, 546, 401);
-        cameraTap(2447, 650, 1779, 724);
+        //moveTap(503, 1085, 546, 401);
+        //cameraTap(2447, 650, 1779, 724);
+
+        //Get Size:
+        var size = Android.getSize();
+        Helper.log(size);
+        //Take Screenshot:
+        var scrn = Android.takeScreenshot();
+        //get matches to determine state:
+        var results = matches(scrn);
     }
 }
 
@@ -68,73 +92,16 @@ function matches(scrn) {
     //test:
     var toTest = {
         //states
-        main: {
-            tmplt: "templates/state/main.png",
+        booting: {
+            tmplt: "loading/pzd.png",
             score: 0.99
         },
         booting: {
-            tmplt: "templates/state/loadScreen.png",
+            tmplt: "loading/loading.png",
             score: 0.99
         },
-        dailyEvent: {
-            tmplt: "templates/state/event.png",
-            score: 0.99
-        },
-        bossSelection: {
-            tmplt: "templates/state/bossSelection.png",
-            score: 0.99
-        },
-        bossLootScreen: {
-            tmplt: "templates/state/bossLoot.png",
-            score: 0.99
-        },
-        //buttons
-        eventCloseBtn: {
-            tmplt: "templates/btns/btn_closeEvent.png",
-            score: 0.99
-        },
-        dragonStatueBtn: {
-            tmplt: "templates/btns/btn_dragonStatue.png",
-            score: 0.99
-        },
-        greenDragonBtn: {
-            tmplt: "templates/btns/btn_grnDrgn.png",
-            score: 0.99
-        },
-        blackDragonBtn: {
-            tmplt: "templates/btns/btn_blkDrgn.png",
-            score: 0.99
-        },
-        redDragonBtn: {
-            tmplt: "templates/btns/btn_redDrgn.png",
-            score: 0.99
-        },
-        sinDragonBtn: {
-            tmplt: "templates/btns/btn_sinDrgn.png",
-            score: 0.99
-        },
-        legendaryDragonBtn: {
-            tmplt: "templates/btns/btn_lgndryDrgn.png",
-            score: 0.99
-        },
-        boneDragonBtn: {
-            tmplt: "templates/btns/btn_boneDrgn.png",
-            score: 0.99
-        },
-        confirmBossBattleBtn: {
-            tmplt: "templates/btns/btn_confirmBossBattle.png",
-            score: 0.99
-        },
-        bossLootSellMoneyBtn: {
-            tmplt: "templates/btns/btn_sellBossLootMoney.png",
-            score: 0.99
-        },
-        bossLootSellMatBtn: {
-            tmplt: "templates/btns/btn_sellBossLootMat.png",
-            score: 0.99
-        },
-        bossLootGetBtn: {
-            tmplt: "templates/btns/btn_getBossLoot.png",
+        characters:{
+            tmplt: "syndrome.png",
             score: 0.99
         }
     }
